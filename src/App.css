@@ -74,6 +74,10 @@
     }
   } */
 
+  :root {
+    color: black;
+  }
+
   @media (max-width: 675px) {
     :root {
       font-size: 10px;

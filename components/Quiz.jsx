@@ -25,9 +25,9 @@ export default function Quiz() {
                             return {value: answer, answer: false, isHold: false, id: nanoid()}
                         }
                     })
+                    allAnswers = shuffleArray(allAnswers)
                     array.push({ ...data[i], allAnswers: allAnswers })
                 }
-                shuffleArray(array)
                 setQuetions(array)
             })
     }, [updateNewQuetions])
@@ -116,6 +116,7 @@ export default function Quiz() {
     )
 }
 
+
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -125,7 +126,6 @@ function shuffleArray(array) {
     }
     return array
 }
-
 
     // const [quetions, setQuetions] = useState([
     //     {
